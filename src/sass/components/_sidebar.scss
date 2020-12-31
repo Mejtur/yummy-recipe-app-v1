@@ -1,0 +1,72 @@
+.sidebar {
+  width: 400px;
+  height: 100%;
+  min-height: 100vh;
+  top: 0;
+  background-color: $mainLightGrey;
+  z-index: 1;
+  position: fixed;
+  transition: transform 1s ease;
+  transform: translate(0);
+
+  &__close {
+    position: absolute;
+    top: 2%;
+    color: $mainOrange !important;
+    right: 5%;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  &__logoContainer {
+    text-align: center;
+    background-color: $mainWhite;
+  }
+
+  &__logo {
+    padding-top: 40px;
+    width: 60%;
+    padding-bottom: 15px;
+  }
+
+  &__links {
+    padding-left: 45px;
+  }
+
+  ul {
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+
+  li {
+    font-family: $mainFont;
+    color: $mainGrey;
+    font-weight: 600;
+    padding: 10px 0;
+    font-size: 28px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  li:hover {
+    color: $mainOrange;
+  }
+}
+
+.sidebarBtn {
+  width: 300px !important;
+}
+
+.hide {
+  transition: all 0.7s ease;
+  transform: translate(-100%);
+}
+
+@media all and (max-width: 420px) {
+  .sidebar {
+    width: 100%;
+  }
+
+  .sidebarBtn{
+    width: 80%!important;
+  }
+}

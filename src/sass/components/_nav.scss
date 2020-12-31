@@ -1,0 +1,131 @@
+.nav {
+  background: white;
+  left: 0;
+  right: 0;
+  position: absolute;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+
+  &__container {
+    padding: 15px 0;
+    display: flex;
+    width: 87.5%;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__links {
+    @include flexCenter;
+  }
+  &__link {
+    padding: 0 30px;
+    font-family: $mainFont;
+    font-size: 24px;
+    color: $mainGrey;
+    cursor: pointer;
+    font-weight: 600;
+    position: relative;
+  }
+
+  &__link:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: -5px;
+    left: 0;
+    background-color: $mainOrange;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__link:hover:before {
+    visibility: visible;
+    width: 100%;
+  }
+
+  &__link:hover {
+    color: $mainOrange;
+    transition: all 0.4s ease-in-out;
+  }
+
+  &__icon {
+    color: $mainWhite;
+    font-size: 32px;
+    padding: 5px;
+    margin: 11px;
+    background: $mainOrange;
+    border-radius: 50%;
+    border: 1px solid $mainOrange;
+  }
+
+  &__icons {
+    margin-top: 5px;
+    display: flex;
+    cursor: pointer;
+  }
+
+  &__hamburger {
+    display: none;
+  }
+}
+
+@media all and (max-width: 1400px) {
+  .nav {
+    &__link {
+      padding: 0 30px;
+      font-size: 20px;
+    }
+  }
+}
+
+@media all and (max-width: 1250px) {
+  .nav {
+    &__link {
+      padding: 0 15px;
+    }
+  }
+}
+
+@media all and (max-width: 900px) {
+  .nav {
+    width: 100%;
+    &__link {
+      padding: 0 10px;
+      font-size: 16px;
+    }
+    &__icon {
+      font-size: 24px;
+      padding: 3px;
+    }
+    &__container {
+      padding: 5px 0;
+    }
+  }
+}
+
+@media all and (max-width: 850px) {
+  .nav {
+    position: absolute;
+    z-index: 10;
+    background: transparent;
+    box-shadow: none;
+
+    &__container {
+      justify-content: start;
+    }
+
+    &__links {
+      display: none;
+    }
+
+    &__hamburger {
+      display: block;
+      color: white;
+      font-size: 46px;
+      cursor: pointer;
+      padding-top: 10px;
+    }
+  }
+}

@@ -1,0 +1,101 @@
+.login{
+position: absolute; /* Stay in place */
+  z-index: 2000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100vh; /* Full height */
+  background-color: rgba(0, 0, 0, 0.212);
+  backdrop-filter: blur(30px);
+  opacity: 1;
+
+  &__container{
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 40px;
+    background: $mainWhite;
+    text-align: center;
+    border: 1px solid $mainGrey;
+  }
+
+  &__logo{
+    width: 300px;
+    margin-top: 50px;
+  }
+
+  &__btn, &__textInput{
+    width: 500px!important;
+    height: 74px!important;
+    margin: 20px 0;
+  }
+
+  &__textInput{
+    border: 1px solid $mainLightGrey;
+    font-size: 32px;
+    color: $mainGrey;
+    border-radius: 45px;
+    padding-left: 36px;
+  }
+
+  &__textInput:focus{
+    outline: none;
+  }
+
+  &__textInput::placeholder{
+    color: $mainLightGrey;
+  }
+
+  &__social{
+    padding-top: 20px;
+    padding-bottom: 60px;
+  }
+
+  &__socialIcon{
+    font-size: 48px;
+    margin: 0 20px;
+    padding: 8px;
+    border: 1px solid $mainGrey;
+    cursor: pointer;
+  }
+
+  &__text{
+    font-size: 8px;
+    color: $mainBlack;
+  }
+
+  &__close{
+    position: relative;
+    float: right;
+    color: $mainOrange;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .login{
+    &__container{
+      width: 100%;
+      margin-top: 0;
+      border: none;
+    }
+  }
+}
+
+@media screen and (max-width:600px){
+  .login{
+    &__btn, &__textInput{
+      width: 80%!important;
+    }
+  }
+}
+
+@media screen and (max-width:360px){
+  .login{
+    &__logo{
+      width: 200px;
+    }
+  }
+}
