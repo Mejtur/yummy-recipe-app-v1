@@ -7,7 +7,7 @@ import {FaTwitter, FaFacebookF, FaInstagram} from 'react-icons/fa';
 function Home() {
     return (
         <div className="home">
-            <Nav />
+            {/* <Nav /> */}
             <div className="home__container">
             <div className="home__columnLeft">
                 <div className="home__colLeft"></div>

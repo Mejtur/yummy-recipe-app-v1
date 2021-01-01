@@ -8,6 +8,7 @@ import Logout from './Logout';
 import Login from './Login';
 import {auth} from '../firebase';
 import {login, logout, selectUser} from '../features/userSlice';
+import {Link} from 'react-router-dom';
 
 function Nav() {
 
@@ -27,20 +28,29 @@ function Nav() {
         })
       }, [dispatch])
 
-    {user ? console.log("logged in") : console.log("not logged in");}
     const [sidebarIsOpen,setSidebarIsOpen] = useState(false);
     const [isLoginOpen, setIsLoginOpen] = useState(false);
     return (
         <div className="nav">
             <div className="nav__container">
             <div className="nav__links">
+              <Link style={{ textDecoration: 'none' }} to="/">
                 <p className="nav__link">Home</p>
+              </Link>
+              <Link style={{ textDecoration: 'none' }} to="/recipes">
                 <p className="nav__link">Recipes</p>
+              </Link>
+              <Link style={{ textDecoration: 'none' }} to="/about">
                 <p className="nav__link">About</p>
+              </Link>
+              <Link style={{ textDecoration: 'none' }} to="/events">
                 <p className="nav__link">Events</p>
+              </Link>
                 <div className="nav__icons">
                     <div className="nav__heart">
+                      <Link style={{ textDecoration: 'none' }} to="/favourites">
                         <AiOutlineHeart className="nav__icon"/>
+                      </Link>
                     </div>
                     <div className="nav__heart">
                         <BsPersonFill className="nav__icon" onClick={()=>{setIsLoginOpen(true)}}/>
