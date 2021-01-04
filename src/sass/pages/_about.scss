@@ -1,0 +1,127 @@
+.about{
+    background: $mainLightGrey;
+    width: 100%;
+    padding-top: 100px;
+    font-family: $mainFont;
+
+    &__container{
+        width: 87.5%;
+        margin: 0 auto;
+        padding-bottom: 80px;
+    }
+
+    &__title{
+        font-size: 64px;
+        font-weight: 600;
+        color: $mainOrange;
+        padding-top: 40px;
+    }
+    
+    
+    .right,.left{
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+
+    .left:after{
+        content: '';
+        border-top: 3px solid;
+        margin: 0 20px 0 100px;
+        flex: 1 0 20px;
+    }
+    
+    .right:before{
+        content: '';
+        border-top: 3px solid;
+        margin: 0 100px 0 0;
+        flex: 1 0 20px;
+    }
+
+    .grey{
+        color: $mainGrey;
+        padding: 0 20px;
+    }
+
+    &__subtitle{
+        font-size: 48px;
+        font-weight: 600;
+        color: $mainGrey;
+        padding-top: 40px;
+        width: 60%;
+    }
+
+    &__text{
+        width: 80%;
+        font-size: 32px;
+        padding-top: 20px;
+        padding-bottom: 80px;
+    }
+
+    &__flex{
+        display: flex;
+    }
+    &__image{
+        margin-right: 100px;
+        width: 60%;
+        object-fit: contain;
+    }
+}
+
+@media screen and (max-width: 1250px){
+    .about{
+        &__flex{
+            flex-direction: column;
+        }
+        &__image{
+            width: 100%;
+            margin-right: 0;
+        }
+        &__text{
+            width: 100%;
+        }
+
+        &__subtitle{
+            width: 100%;
+        }   
+    }
+}
+
+@media screen and (max-width: 850px){
+    .about{
+        &__title{
+            font-size: 48px;
+        }
+        &__subtitle{
+            font-size: 32px;
+        }
+        &__text{
+            font-size: 24px;
+        }
+    }
+
+    .left:after{
+        margin: 0 20px 0 20px!important;
+    }
+    .right:before{
+        margin: 0 20px 0 0!important;
+    }
+    .grey{
+        padding: 0 10px!important;
+    }
+}
+
+@media screen and (max-width: 450px){
+
+    .about{
+        &__title{
+            font-size: 32px;
+        }
+        &__subtitle{
+            font-size: 24px;
+        }
+        &__text{
+            font-size: 16px;
+        }
+    }
+}

@@ -10,7 +10,7 @@ import {auth} from '../firebase';
 import {login, logout, selectUser} from '../features/userSlice';
 import {Link} from 'react-router-dom';
 
-function Nav() {
+function Nav({isNavbarWhite}) {
 
     const user = useSelector(selectUser);
     const dispatch = useDispatch();
@@ -31,7 +31,7 @@ function Nav() {
     const [sidebarIsOpen,setSidebarIsOpen] = useState(false);
     const [isLoginOpen, setIsLoginOpen] = useState(false);
     return (
-        <div className="nav">
+        <div className={isNavbarWhite ? "nav white" : "nav"}>
             <div className="nav__container">
             <div className="nav__links">
               <Link style={{ textDecoration: 'none' }} to="/">
@@ -57,8 +57,8 @@ function Nav() {
                     </div>
                 </div>
             </div>
-            <div className="nav__hamburger">
-                <GiHamburgerMenu className="nav__burger" onClick={()=>setSidebarIsOpen(true)}/>
+            <div className={isNavbarWhite ? "nav__hamburger red" : "nav__hamburger"}>
+                <GiHamburgerMenu onClick={()=>setSidebarIsOpen(true)}/>
             </div>
             </div>
             <Sidebar sidebarIsOpen={sidebarIsOpen} setSidebarIsOpen={setSidebarIsOpen} setIsLoginOpen={setIsLoginOpen} isLoginOpen={isLoginOpen}/>

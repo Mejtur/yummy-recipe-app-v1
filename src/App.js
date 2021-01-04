@@ -17,19 +17,19 @@ function App() {
           <Home />
         </Route>
         <Route path="/recipes">
-          <Nav />
+          <Nav isNavbarWhite={true} />
           <Recipes />
         </Route>
         <Route path="/about">
-          <Nav />
+          <Nav isNavbarWhite={true}/>
           <About />
         </Route>
         <Route path="/events">
-          <Nav />
+          <Nav isNavbarWhite={true}/>
           <Events />
         </Route>
         <Route path="/favourites">
-          <Nav />
+          <Nav isNavbarWhite={true}/>
           <Favourites />
         </Route>
       </Switch>
