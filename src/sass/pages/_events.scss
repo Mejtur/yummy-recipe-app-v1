@@ -35,3 +35,29 @@
         margin-left: 160px; 
     }    
 }
+
+@media all and (max-width: 1000px){
+    .events{
+        &__title::before { 
+            margin-right: 80px; 
+        }    
+        &__title::after { 
+            margin-left: 80px; 
+        }
+    }
+}
+
+@media all and (max-width: 600px){
+    .events{
+        &__title{
+            font-size: 48px;
+        }
+
+        &__title::before { 
+            margin-right: 10px; 
+        }    
+        &__title::after { 
+            margin-left: 10px; 
+        }
+    }
+}

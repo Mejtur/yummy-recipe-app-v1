@@ -10,23 +10,21 @@
 
     &__image{
         border-radius: 45px;
-        width: 400px;
-        height: 100%;
-        object-fit: cover;
+        width: 450px;
     }
     &__textContainer{
         padding: 45px;
     }
 
     &__title{
-        font-size: 64px;
+        font-size: 48px;
         color: $mainOrange;
         font-weight: 600;
     }
 
     &__location,&__date{
         color: $mainGrey;
-        font-size: 32px;
+        font-size: 24px;
         font-weight: 600;
     }
     &__flex{
@@ -38,5 +36,44 @@
     &__text{
         font-weight: 600;
         width: 90%;
+        font-size: 12px;
+    }
+}
+
+@media all and (max-width: 1000px){
+    .event{
+        flex-direction: column;
+    
+        &__image{
+            width: 100%;
+            height: 300px;
+        }
+        &__textContainer{
+            padding: 20px 45px;
+        }
+    }
+}
+
+@media all and (max-width:600px){
+    .event{
+        &__title{
+            font-size: 32px;
+        }
+        &__location,&__date{
+            font-size: 16px;
+        }
+
+        &__flex{
+            flex-direction: column;
+        }
+
+        &__image{
+            width: 100%;
+            height: 200px;
+        }
+
+        &__textContainer{
+            padding: 20px 10px;
+        }
     }
 }

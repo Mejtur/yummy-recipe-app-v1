@@ -14,7 +14,7 @@ function Events() {
                     For The Last Wednesday Of August. That's When Their Annual Tomato-Throwing 
                     Festival—The World's Biggest Food Fight—Takes Place. Revelers Throw Over-Ripe 
                     Tomatoes At Each Other Until Water Cannons Break It Up."
-                    img="https://upload.wikimedia.org/wikipedia/commons/a/af/Flag_of_South_Africa.svg"
+                    img="https://i.pinimg.com/originals/64/74/67/64746704c4bf09efedd9710bcf7b0eeb.jpg"
                 />
                 <Event 
                     title="Pembrokeshire Fish Week"
