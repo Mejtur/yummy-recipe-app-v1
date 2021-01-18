@@ -30,9 +30,9 @@ position: absolute; /* Stay in place */
   }
 
   &__textInput{
-    border: 1px solid $mainLightGrey;
+    border: 1px solid $mainGrey;
     font-size: 32px;
-    color: $mainGrey;
+    color: $mainBlack;
     border-radius: 45px;
     padding-left: 36px;
   }
@@ -42,7 +42,7 @@ position: absolute; /* Stay in place */
   }
 
   &__textInput::placeholder{
-    color: $mainLightGrey;
+    color: $mainGrey; 
   }
 
   &__social{

@@ -28,7 +28,7 @@ function Login({setIsLoginOpen}) {
             .createUserWithEmailAndPassword(email, password)
             .catch((error) => alert(error.message))
             .then(()=>{
-                setIsLoginOpen(false);
+                // setIsLoginOpen(false);
             })
     }
 
