@@ -47,11 +47,11 @@ function Nav({isNavbarWhite}) {
                 <p className="nav__link">Events</p>
               </Link>
                 <div className="nav__icons">
-                    <div className="nav__heart">
+                    {/* <div className="nav__heart">
                       <Link style={{ textDecoration: 'none' }} to="/favourites">
                         <AiOutlineHeart className="nav__icon"/>
                       </Link>
-                    </div>
+                    </div> */}
                     <div className="nav__heart">
                         <BsPersonFill className="nav__icon" onClick={()=>{setIsLoginOpen(true)}}/>
                     </div>

@@ -23,9 +23,9 @@ function Sidebar({sidebarIsOpen, setSidebarIsOpen, isLoginOpen, setIsLoginOpen})
                 <Link style={{ textDecoration: 'none' }} to="/events">
                     <li>EVENTS</li>
                 </Link>
-                <Link style={{ textDecoration: 'none' }} to="/favourites">
+                {/* <Link style={{ textDecoration: 'none' }} to="/favourites">
                     <li>FAVOURITES</li>
-                </Link>
+                </Link> */}
                 </ul>
                 <button className="btn sidebarBtn" onClick={()=>{setIsLoginOpen(true)}}>LOG IN/REGISTER</button>
             </div>
